@@ -1,0 +1,50 @@
+.promo-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 40px;
+    padding-top: 20px;
+  
+    gap: 20px;
+  }
+  
+  .promo-card {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  .pink-bg {
+    background-color: #fde8e4;
+  }
+  
+  .blue-bg {
+    background-color: #eaf6ff;
+  }
+  
+  .promo-text {
+    max-width: 50%;
+  }
+  
+  .promo-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .promo-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .promo-image {
+    width: 250px;
+    height: auto;
+  }
+  
