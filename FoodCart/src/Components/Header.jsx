@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaSearch, FaUser, FaHeart } from "react-icons/fa";
 import '../styles/Header.css';
- 
+ import Cart from '../Components/Cart';
 const bannerSlides = [
   {
     tag: '100% Natural',
@@ -29,52 +29,56 @@ const Header = () => {
   const [showPagesDropdown, setShowPagesDropdown] = useState(false);
   const [showDepartmentsDropdown, setShowDepartmentsDropdown] = useState(false);
 
+  const [isCartOpen, setIsCartOpen] = useState(false); 
+
+
   return (
     <div>
- 
-    <div className="top-bar">
-      <div className="container">
-       
-        <div className="logo">
-          <img src="https://themewagon.github.io/FoodMart/images/logo.png" alt="FoodMart Logo" className="logo-img" />
-         
-        </div>
-       
-   
-        <div className="search-bar">
-          <select className="category-select">
-            <option>All Categories</option>
-            <option>Groceries</option>
-            <option>Drinks</option>
-            <option>Chocolates</option>
-            
-          </select>
-          <input type="text" placeholder="Search for more than 20,000 products" className="search-input" />
-          <FaSearch className="search-icon" />
-        </div>
- 
-   
-        <div className="support-cart">
-  <div className="support-text">
-    <span className="support-label">For Support?</span>
-    <span className="support-number">+980-34984089</span>
-  </div>
-  <div className="icon-group">
-    <FaUser className="icon" />
-    <FaHeart className="icon" />
-  </div>
-  <div className="cart-container">
-    <span className="cart-text">Your Cart</span>
-    <span className="cart-amount">$1290.00</span>
-  </div>
-</div>
 
+      <div className="top-bar">
+        <div className="container">
+
+          <div className="logo">
+            <img src="https://themewagon.github.io/FoodMart/images/logo.png" alt="FoodMart Logo" className="logo-img" />
+
+          </div>
+
+
+          <div className="search-bar">
+            <select className="category-select">
+              <option>All Categories</option>
+              <option>Groceries</option>
+              <option>Drinks</option>
+              <option>Chocolates</option>
+
+            </select>
+            <input type="text" placeholder="Search for more than 20,000 products" className="search-input" />
+            <FaSearch className="search-icon" />
+          </div>
+
+
+          <div className="support-cart">
+            <div className="support-text">
+              <span className="support-label">For Support?</span>
+              <span className="support-number">+980-34984089</span>
+            </div>
+            <div className="icon-group">
+              <FaUser className="icon" />
+              <FaHeart className="icon" />
+            </div>
+
+            <div className="cart-text" onClick={() => setIsCartOpen(true)}>
+              Your Cart <span className="cart-amount">$1290.00</span>
+            </div>
+          </div>
+        </div>
       </div>
- 
-     
-      <div className="menu-bar">
-      <div className="menu-container">
-      <div 
+
+
+      {isCartOpen && <Cart onClose={() => setIsCartOpen(false)} />}
+    <div className="menu-bar">
+        <div className="menu-container">
+          <div
             className="menu-item dropdown"
             onMouseEnter={() => setShowDepartmentsDropdown(true)}
             onMouseLeave={() => setShowDepartmentsDropdown(false)}
@@ -93,7 +97,7 @@ const Header = () => {
           <span className="menu-item">Kids</span>
           <span className="menu-item">Accessories</span>
 
-          <div 
+          <div
             className="menu-item dropdown"
             onMouseEnter={() => setShowPagesDropdown(true)}
             onMouseLeave={() => setShowPagesDropdown(false)}
@@ -121,8 +125,7 @@ const Header = () => {
           <span className="menu-item">Blog</span>
         </div>
       </div>
-    </div>
- 
+   
  
       <div className="hero">
         <div className="main-banner">
@@ -165,8 +168,10 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
    
+  
   );
 };
  
