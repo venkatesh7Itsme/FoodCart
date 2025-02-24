@@ -18,37 +18,29 @@
   }
   
   .view-all {
-    background: none;
-    border: none;
-    font-size: 16px;
-    color: #007bff;
+    
+    
+    font-size: 14px;
+    color:  #666;
     cursor: pointer;
-    transition: color 0.3s;
-  }
+    }
   
-  .view-all:hover {
-    color: #0056b3;
-  }
+  
   
   .nav-buttons {
     display: flex;
     gap: 5px;
   }
   
-  .nav-btn {
-    background: #fff;
+  .nav-button {
+  
     border: none;
-    padding: 8px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: transform 0.2s;
+    font-size: 16px;
+    background: none;
   }
-  
-  .nav-btn:hover {
-    transform: scale(1.1);
-  }
-  
+
+
   .scroll-container {
     overflow-x: hidden;
     padding: 10px;

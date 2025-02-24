@@ -60,7 +60,7 @@
   }
   
   .discount {
-    /* position: absolute;*/
+     position: absolute;
     top: 10px;
     left: 10px;
     background: green;
@@ -117,7 +117,7 @@
   }
   
   .quantity-control button {
-    background: #ddd;
+  
     border: none;
     padding: 5px;
     cursor: pointer;

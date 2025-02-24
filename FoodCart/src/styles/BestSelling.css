@@ -1,140 +1,137 @@
 .best-sellers-container {
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-  }
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #555;
+}
+
+.nav-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  border: none;
+  background: #eee;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 10px;
+  border-radius: 5px;
+}
+
+.products-wrapper {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+.product-card {
   
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .section-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .view-all-btn {
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    color: #555;
-  }
-  
-  .nav-controls {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .nav-btn {
-    border: none;
-    background: #eee;
-    padding: 6px 12px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
-  }
-  
-  .products-wrapper {
-    display: flex;
-    gap: 20px;
-    padding-bottom: 10px;
-  
-    scroll-behavior: smooth;
-    max-width: 100%;
-  }
-  
-  .product-card {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-width: 220px;
-    text-align: center;
-    position: relative;
-    flex-shrink: 0;
-  }
-  
-  .discount-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: green;
-    color: white;
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 5px;
-  }
-  
-  .wishlist-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .product-image {
-    width: 100px;
-    height: auto;
-    margin: 10px 0;
-  }
-  
-  .product-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .product-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .product-price {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
-    color: #333;
-  }
-  
-  .cart-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .quantity-controls {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .quantity-btn {
-    border: none;
-    background: #ddd;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .add-cart-btn {
-    border: none;
-    padding: 5px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-  
-    font-weight: bold;
-  }
-  
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 220px;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+  background: #F9F9F9;
+}
+
+
+.discount-badge {
+  position: absolute;
+  top: 10px;  
+  left: 10px; 
+  background: green;
+  color: white;
+  padding: 3px 6px; 
+  font-size: 12px; 
+  border-radius: 3px;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 40px; 
+  text-align: center;
+}
+
+
+
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  margin: 10px 0;
+}
+
+.product-title {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #333333;
+  margin: 0;
+}
+
+
+.product-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  gap: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+
+.product-price {
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: capitalize;
+  color: #222222;
+  text-align: left;
+  margin-top: 5px;
+}

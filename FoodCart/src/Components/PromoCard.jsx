@@ -6,7 +6,7 @@ const PromoCards = () => {
     <div className="promo-container">
       <div className="promo-card pink-bg">
         <div className="promo-text">
-          <p className="discount">Upto 25% Off</p>
+          <p className="offer">Upto 25% Off</p>
           <h2 className="title">Luxa Dark Chocolate</h2>
           <p className="description">
             Very tasty & creamy vanilla flavour creamy muffins.
@@ -22,7 +22,7 @@ const PromoCards = () => {
  
       <div className="promo-card blue-bg">
         <div className="promo-text">
-          <p className="discount">Upto 25% Off</p>
+          <p className="offer">Upto 25% Off</p>
           <h2 className="title">Creamy Muffins</h2>
           <p className="description">
             Very tasty & creamy vanilla flavour creamy muffins.

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight, FaHeart, FaPlus, FaMinus } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaHeart, FaPlus, FaMinus,FaStar } from "react-icons/fa";
 import "../styles/JustArrived.css";
  
 const allProducts = [
@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
   const decreaseQuantity = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
- 
+  
   return (
     <div className="product-card">
       <div className="favorite-icon" onClick={() => setIsFavorite(!isFavorite)}>
@@ -66,9 +66,9 @@ const ProductCard = ({ product }) => {
       <img src={product.image} alt={product.name} className="product-image" />
       <h3 className="product-name">{product.name}</h3>
       <div className="product-info">
-        <span className="product-rating">⭐ {product.rating}</span>
-        <span className="product-price">{product.price}</span>
+        <span>1 UNIT <FaStar color="gold" /> 4.5</span>
       </div>
+     
       <div className="cart-controls">
         <div className="quantity-control">
           <button className="quantity-button" onClick={decreaseQuantity}>

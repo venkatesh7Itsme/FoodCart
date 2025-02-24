@@ -16,27 +16,6 @@
     align-items: center;
     gap: 15px;
   }
-  
-  .view-collection {
-    background: none;
-    border: none;
-    color: blue;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .navigation-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .nav-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
   .product-grid {
     display: flex;
     gap: 15px;
@@ -88,6 +67,27 @@
     font-size: 14px;
     margin-bottom: 10px;
   }
+ .view-collection {
+    background: none;
+    border: none;
+    
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  
   
   .cart-controls {
     display: flex;
@@ -103,17 +103,35 @@
   }
   
   .quantity-button {
-    border: none;
+   /* border: none;
     background: #ddd;
     padding: 5px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;*/
+    width: 26px;
+    height: 26px;
+    line-height: 1;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    color: #222;
+    padding: 0;
   }
   
   .add-to-cart {
-    border: none;
+   /* border: none;
     padding: 5px 10px;
     border-radius: 5px;
-    cursor: pointer;
-  }
+    cursor: pointer;*/
   
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15sease-in-out, background-color .15sease-in-out, border-color .15sease-in-out
+  }

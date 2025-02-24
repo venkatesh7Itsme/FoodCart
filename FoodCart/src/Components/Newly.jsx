@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../styles/Newly.css";
  
 const brandItems = [
@@ -64,8 +64,8 @@ const NewArrivals = () => {
         <div className="right-controls">
           <button className="view-all">View All Categories →</button>
           <div className="nav-buttons">
-            <button className="nav-btn" onClick={scrollLeft}><FiChevronLeft size={20} /></button>
-            <button className="nav-btn" onClick={scrollRight}><FiChevronRight size={20} /></button>
+            <button className="nav-btn" onClick={scrollLeft}><FaChevronLeft  /></button>
+            <button className="nav-btn" onClick={scrollRight}><FaChevronRight  /></button>
           </div>
         </div>
       </div>

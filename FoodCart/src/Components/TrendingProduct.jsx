@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { FaHeart, FaRegHeart,FaStar,FaPlus, FaMinus, } from "react-icons/fa";
+
 import "../styles/TrendingProduct.css";
  
 const products = [
@@ -102,13 +102,14 @@ const ProductList = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [wishlist, setWishlist] = useState({});
  
-  const increment = (id) => {
-    setQuantities((prev) => ({ ...prev, [id]: prev[id] + 1 }));
+  const handleIncrement = (id) => {
+    setQuantities((prev) => ({ ...prev, [id]: (prev[id] || 1) + 1 }));
   };
- 
-  const decrement = (id) => {
-    setQuantities((prev) => ({ ...prev, [id]: prev[id] > 1 ? prev[id] - 1 : 1 }));
+
+  const handleDecrement = (id) => {
+    setQuantities((prev) => ({ ...prev, [id]: Math.max((prev[id] || 1) - 1, 1) }));
   };
+
  
   const toggleWishlist = (id) => {
     setWishlist((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -142,15 +143,20 @@ const ProductList = () => {
             </span>
             <img src={product.image} alt={product.name} className="product-image" />
             <h3>{product.name}</h3>
-            <p className="unit">{product.unit}</p>
-            <p className="rating">⭐ {product.rating}</p>
-            <p className="price">${product.price.toFixed(2)}</p>
-            <div className="quantity-control">
-              <button onClick={() => decrement(product.id)}><AiOutlineMinus /></button>
-              <span>{quantities[product.id]}</span>
-              <button onClick={() => increment(product.id)}><AiOutlinePlus /></button>
-            </div>
-            <button className="add-to-cart">Add to Cart</button>
+
+            <div className="product-details">
+                        <span>1 UNIT <FaStar color="gold" /> 4.5</span>
+                        </div>
+                        <p className="product-price">${product.price.toFixed(2)}</p>
+
+                       <div className="cart-controls">
+                         <div className="quantity-control">
+                           <button className="quantity-button" onClick={() => handleDecrement(product.id)}><FaMinus /></button>
+                           <span>{quantities[product.id] || 1}</span>
+                           <button className="quantity-button" onClick={() => handleIncrement(product.id)}><FaPlus /></button>
+                         </div>
+                         <button className="add-to-cart">Add to Cart</button>
+                       </div>
           </div>
         ))}
       </div>

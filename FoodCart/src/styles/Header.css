@@ -22,9 +22,6 @@ body {
   box-sizing: border-box;
 }
 
-.app {
-  font-family: system-ui, -apple-system, sans-serif;
-}
 
 .top-bar {
   background: white;
@@ -101,11 +98,11 @@ body {
 .support-cart {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .support-text {
-  text-align: right;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
 }
@@ -130,18 +127,25 @@ body {
   font-size: 14px;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  flex-direction: column; 
+  text-align: right; 
 }
 
 .cart-amount {
-  color: #f4b400;
-  margin-left: 5px;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2px; 
 }
+
+
+
+
 
 .menu-bar {
   background: white;
   /* border-top: 1px solid #eee;*/
-  padding: 10px 0;
+  padding: 50px 0;
 }
 
 .menu-container {
@@ -159,6 +163,31 @@ body {
 
 .menu-item.bold {
   font-weight: bold;
+}
+
+
+.dropdown-menu {
+  position: relative;
+  top: 30px;
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 .hero {
@@ -210,6 +239,26 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+
+.sale-banner h2 {
+  display: inline-block;
+  margin-right: 5px; 
+  vertical-align: middle; 
+}
+.sale-banner span {
+  display: inline-block;
+  font-size: 14px; 
+  vertical-align: middle;
+}
+
+
+.sale-line {
+  width: 50px; 
+  height: 2px;  
+  background-color: black; 
+}
+
+
 
 .shop-btn:hover {
   background: var(--primary-text);
@@ -288,7 +337,26 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  display: block; 
+  line-height: 1.3;
 }
+.promo-content span {
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.promo-content span::after {
+ 
+  display: block;
+  width: 30px; 
+  height: 2px;
+  background: black;
+  margin-top: 5px;
+}
+
 
 .shop-link {
   color: var(--primary-text);
